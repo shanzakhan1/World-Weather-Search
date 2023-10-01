@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Weather</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="#searchSection">Search</a></li>
+                <li><a href="#weatherSection">Weather</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container" id="searchSection">
+        <h1 class="app-title">Weather</h1>
+        <div class="weather-form">
+            <input class="weather-input" type="text" id="cityInput" placeholder="Enter city name" required autocomplete="off" list="cityList">
+            <datalist id="cityList"></datalist>
+            <button class="weather-button" id="searchButton">Search</button>
+        </div>
+    </div>
+    <div class="container" id="weatherSection">
+        <div class="weather-results" id="weatherResults"></div>
+    </div>
+    <footer class="footer">Weather App &copy; 2023</footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
